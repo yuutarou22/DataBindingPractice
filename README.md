@@ -16,3 +16,16 @@
 - layout.xml
     - `option + Enter`
     - `Convert to data binding layout`を選択
+
+### レイアウトとコードの紐付け
+
+- layout.xml
+    - variableタグ
+        - name（変数名）
+        - type（型）
+    - `@{name}`でDataBindingを実装できる
+- Fragment
+    - Bindingクラスは、ViewDataBindingクラスを継承している
+    - DataBindingを実装しビルドしたら自動生成される
+    - onCreateViewの戻り値に`binding.root`を指定することでFragmentのレイアウトを設定できる
+    - `binding.textButton = "aaa"`でできちゃう
