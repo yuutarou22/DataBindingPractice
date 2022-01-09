@@ -4,8 +4,9 @@
     
     <data>
         <variable
-            name="buttonText"
-            type="String" />
+            name="vm"
+            type="com.example.databindingpractice.viewmodel.TextInputViewModel" />
+        
     </data>
     
     <LinearLayout
@@ -13,13 +14,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        tools:context=".Fragment.TextInputFragment">
+        tools:context=".fragment.TextInputFragment">
         
         <TextView
             android:id="@+id/outputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="出力テキスト" />
+            android:text="@{vm.submittedText}" />
         
         <EditText
             android:id="@+id/inputText"
@@ -27,11 +28,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp" />
         
+        <!-- ViewModelのLiveDataを参照している -->
         <Button
             android:id="@+id/submitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{buttonText}"
+            android:text="@{vm.buttonText}"
+            android:enabled="@{vm.isEnabled}"
             tools:text="Ready"
             android:layout_marginTop="20dp" />
     

@@ -1,7 +1,11 @@
 # DataBindingPractice
 
 ## 参考文献
-[【Android】はじめてのDataBinding](https://qiita.com/iTakahiro/items/b5fe2b186750c6e774e5)
+- [【Android】はじめてのDataBinding](https://qiita.com/iTakahiro/items/b5fe2b186750c6e774e5)
+- [どうしてもCannot access class '〇〇'. Check your module classpath for missing or conflicting dependenciesでエラーする。](https://qiita.com/kkkkan/items/a81fae9fe5ff5de928ce)
+    - パッケージ名を大文字始まりにしてしまっていた。ミスった。
+    - Fragment → fragment
+    - ViewModel → viewModel
 
 ## 学習メモ
 
@@ -29,3 +33,19 @@
     - DataBindingを実装しビルドしたら自動生成される
     - onCreateViewの戻り値に`binding.root`を指定することでFragmentのレイアウトを設定できる
     - `binding.textButton = "aaa"`でできちゃう
+
+### ViewModelを作成
+
+- LiveData
+    - 値がセットされた時に、値がセットされたことを検知できるクラス
+    - 実際に値が入る時は、MutableLiveDataであり、LiveDataに直接値が入るわけではない。
+- MutableLiveData
+    - 変更可能なLiveData
+
+### layout.xmlにViewModelを導入
+
+- dataタグで定義した変数を書き換える
+
+### FragmentにViewModelを導入
+
+- 
