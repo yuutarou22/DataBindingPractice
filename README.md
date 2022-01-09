@@ -7,3 +7,12 @@
 
 - Fragmentの作成
     - 今回はMainActivityにブッ込んどくだけ。
+    
+### DataBindingの導入
+
+- build.gradle(Module:app)
+    - dataBindingを有効化
+    - Syncを忘れずに
+- layout.xml
+    - `option + Enter`
+    - `Convert to data binding layout`を選択
